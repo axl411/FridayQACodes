@@ -13,15 +13,34 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    let referer = WeakReferer()
-    let refererDump = dumperFunc(referer)
-    
+    let target = WeakTarget()
+    let targetDump = dumperFunc(target)
     do {
-      let target = NSObject()
-      referer.target = target
-      print(target)
-      print(refererDump())
+      print(targetDump())
+      weak var a = target
+      print(targetDump())
+      weak var b = target
+      print(targetDump())
+      weak var c = target
+      print(targetDump())
+      weak var d = target
+      print(targetDump())
+      weak var e = target
+      print(targetDump())
+      var f = target
+      print(targetDump())
+      var g = target
+      print(targetDump())
+      var h = target
+      print(targetDump())
+      var i = target
+      print(targetDump())
+      var j = target
+      print(targetDump())
+      var k = target
+      print(targetDump())
     }
-    print(refererDump())
   }
+  
 }
+

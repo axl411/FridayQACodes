@@ -40,4 +40,9 @@ class WeakReferer {
   var dummy2: UInt = 0xabcdefabcdefabcd
 }
 
-class WeakTarget {}
+class WeakTarget {
+  var dummy = 0x0123456789abcdef
+  deinit {
+    print("Weak target deinit")
+  }
+}
